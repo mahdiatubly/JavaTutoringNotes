@@ -1,5 +1,5 @@
 <h1>Java</h1>
-<h2>JVM(Java Virtual Machine)</h2>
+<h2>JVM (Java Virtual Machine)</h2>
 There are 3 types of high-level programming languages: <br>
 - <strong>Compiled:</strong> The code is compiled (translated) into a machine code that runs on a specific platform (Microsoft/Mac/...) <br>
 - <strong>Interpreted:</strong> Translate the code into machine code whenever you run the program, the translation to machine code won't be saved in any form. If you want to rerun the code you have to retranslate the whole code again. That is what makes interpreted programming languages slower than compiled ones. <br>
@@ -42,4 +42,6 @@ Generics are used to generalize the code where it can be used with different dat
 
 <h2>Java Collection</h2>
 Before we start with the Java collection let's take a look at the idea of wrapper classes; wrapper classes are objects that represent the primitive data types. They are used in places primitive types in object form. Java Collection does not accept primitive types therefore we have to use wrapper classes. One of the greatest things about wrapper classes is the autoboxing and unboxing where the type of the values will be changed automatically into primitive wherever you need them as primitives.
+The most important classes in Java Collection:
+<strong>- ArrayList: </strong>is a dynamic list that grows automatically, it is so fast in accessing data while it uses random access algorithm to access data. It is not a perfect choice for adding and removing elements from the list which requires a lot of work.
 
