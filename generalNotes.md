@@ -7,7 +7,12 @@ There are 3 types of high-level programming languages: <br>
 
 <h2>Generics</h2>
 Generics are used to generalize the code where it can be used with different data types. Example:
-
+    
+    /* 
+    You can restrict the type of generic to be the classes that extend a specific class or interface:
+    <T extends Class1 & Interface1 & Interface2>
+    Remember that you can't extend more than one class but you can extend as much as you want of interfaces.
+    */
     public class Test <T>{
       public void print(T v) {
           System.out.println(v);
@@ -16,8 +21,24 @@ Generics are used to generalize the code where it can be used with different dat
 
     //main:
     public class Main {
-      public static void main(String[] args) {
-          Test<String> T = new Test<>();
-          T.print("ABBAS\nHUSSAIN\nHUSSAIN\nHUSSAIN\n");
-      }
+        public static void main(String[] args) {
+            Test<String> T = new Test<>();
+            Integer[] init = {1,2,3,4,5,6,7,8,9,10,11,12,13,14};
+            List<Integer> l = new ArrayList<>(Arrays.asList(init));
+            T.print("ABBAS\nHUSSAIN\nHUSSAIN\nHUSSAIN\n");
+            repeatedPrint("HUSSAIN");
+            printList(l);
+        }
+        public static <T> void repeatedPrint(T s){
+            System.out.println("\n"+s+"\n"+s);
+        }
+    
+        public static void printList(List<?> l){
+            for (Object e:l) {
+                System.out.println(e);
+            }
+    
+        }
+    
+    
     }
