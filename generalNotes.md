@@ -48,10 +48,18 @@ There are 4 interfaces that implement the Java Collection Interface: <br>
 3. Queue Interface.
 4. Map Interface.
 <strong>- ArrayList: </strong>is a dynamic list that grows automatically, it is so fast in accessing data while it uses random access algorithm to access data. It is not a perfect choice for adding and removing elements from the list which requires a lot of work. <br>
-In Java.util package there is a class called Collections. It has a lot of useful methods that can be applied to lists as:
+In the 'java.util' package there is a class called Collections. It has a lot of useful methods that can be applied to lists as:
 
         Collections.Sort(List);
         Collection.Shuffle(List);
 
 
+<h2>Iterator</h2>
+It is a class provided by the 'java.util' package that can be used to iterate over iterable data structures. Iterator is more efficient than loops where it does not keep track of the indices of the elements and it is more thread-safe than loops. Example:
 
+        Integer[] init = {1,2,3,4,5,6,7,8,9,10,11,12,13,14};
+        List li = new List(Arrays.asList(inti));
+        Iterator itrList = li.iterator();
+        while(itrList.hasNext()){
+            System.out.println(itrList.next());
+        }
