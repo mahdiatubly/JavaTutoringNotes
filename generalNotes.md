@@ -48,7 +48,9 @@ There are 4 interfaces that implement the Java Collection Interface: <br>
 3. Queue Interface. <br>
 4. Map Interface. <br>
 <h3>- ArrayList: </h3>is a dynamic list that grows automatically, it is so fast in accessing data while it uses random access algorithm to access data. It is not a perfect choice for adding and removing elements from a list which requires a lot of work. It implements List Interface <br> 
-<h3>- LinkedList: </h3>is a dynamic list that grows automatically, it is so fast in adding and removing elements from the list while it is composed from nodes that connected to eash others using addresses while they are ditributed randomly in memory. It is so slow in retrieving data as they are distributed randomly in the memory. It implements List Interface and DeQueue Interface. <br>
+<h3>- LinkedList: </h3>is a dynamic list that grows automatically, it is so fast in adding and removing elements from the list and it is composed of nodes that are connected to each other using addresses while they are distributed randomly in memory. It is so slow in retrieving data as they are distributed randomly in the memory. It implements List Interface and DeQueue Interface. <br>
+<h3>- Stack: </h3>is a dynamic list that grows automatically, it builds on the concept of "First In Last Out (FILO)" <br>
+<h3>- Queue: </h3>is a dynamic list that grows automatically, it builds on the concept of "First In First Out (FIFO)" <br>
 <br>
 In the 'java.util' package there is a class called Collections. It has a lot of useful methods that can be applied to lists as:
 
