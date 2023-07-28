@@ -48,7 +48,11 @@ There are 4 interfaces that implement the Java Collection Interface: <br>
 3. Queue Interface. <br>
 4. Map Interface. <br>
 <h3>- ArrayList: </h3>is a dynamic list that grows automatically, it is so fast in accessing data while it uses random access algorithm to access data. It is not a perfect choice for adding and removing elements from a list which requires a lot of work. It implements List Interface <br> 
-<h3>- LinkedList: </h3>is a dynamic list that grows automatically, it is so fast in adding and removing elements from the list and it is composed of nodes that are connected to each other using addresses while they are distributed randomly in memory. It is so slow in retrieving data as they are distributed randomly in the memory. It implements List Interface and DeQueue Interface. <br>
+<h3>- LinkedList: </h3>is a dynamic list that grows automatically, it is so fast in adding and removing elements from the list and it is composed of nodes that are connected to each other using addresses while they are distributed randomly in memory. It is so slow in retrieving data as they are distributed randomly in the memory. It implements List Interface and DeQueue Interface. The functions inherited from DeQueue Interface include "getFirst()", "getLast()", "addFirst()", "addLast", etc. <br>
+<h3>- HashSet: </h3>is a dynamic list that grows automatically, it does not accept duplicates. Its initial size by default is 16 with a 75% load factor, to change those default values: <br>
+
+        HashSet<String> hs = new HashSet<>(100, 0.8)
+        
 <h3>- Stack: </h3>is a dynamic list that grows automatically, it builds on the concept of "First In Last Out (FILO)" <br>
 <h3>- Queue: </h3>is a dynamic list that grows automatically, it builds on the concept of "First In First Out (FIFO)" <br>
 <br>
