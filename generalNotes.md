@@ -52,9 +52,11 @@ There are 4 interfaces that implement the Java Collection Interface: <br>
 <h3>- HashSet: </h3>is a dynamic list that grows automatically, it does not accept duplicates. Its initial size by default is 16 with a 75% load factor, to change those default values: <br>
 
         HashSet<String> hs = new HashSet<>(100, 0.8)
+
+<h3>- LinkedHashSet: </h3>is a dynamic list that grows automatically, it does not accept duplicates. It does not accept duplicates but it preserves the insertion oreder of the elements, its internal implementation based on hash table and linked list. <br>
         
 <h3>- Stack: </h3>is a dynamic list that grows automatically, it builds on the concept of "First In Last Out (FILO)" <br>
-<h3>- Queue: </h3>is a dynamic list that grows automatically, it builds on the concept of "First In First Out (FIFO)" <br>
+<h3>- PriorityQueue: </h3>is a dynamic list that grows automatically, it builds on the concept of "First In First Out (FIFO)", it similar to LinkedList where it implements Queue Interface but it does not support hetrogeneouse data in the list. It has two main methods "offer()" and "add()", the first one return "Null" if the insertion fail and the second returns an exeption. <br>
 <br>
 In the 'java.util' package there is a class called Collections. It has a lot of useful methods that can be applied to lists as:
 
