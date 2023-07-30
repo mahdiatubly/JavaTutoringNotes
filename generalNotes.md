@@ -42,21 +42,20 @@ Generics are used to generalize the code where it can be used with different dat
 
 <h2>Java Collection Framework</h2>
 Before we start with the Java collection let's take a look at the idea of wrapper classes; wrapper classes are objects that represent the primitive data types. They are used in places primitive types in object form. Java Collection does not accept primitive types therefore we have to use wrapper classes. One of the greatest things about wrapper classes is the autoboxing and unboxing where the type of the values will be changed automatically into primitive wherever you need them as primitives. <br>
-There are 4 interfaces that implement the Java Collection Interface: <br>
+There are 3 interfaces that implement the Java Collection Interface: <br>
 1. List Interface. <br>
 2. Set Interface. <br>
 3. Queue Interface. <br>
-4. Map Interface. <br>
 <h3>- ArrayList: </h3>is a dynamic list that grows automatically, it is so fast in accessing data while it uses random access algorithm to access data. It is not a perfect choice for adding and removing elements from a list which requires a lot of work. It implements List Interface <br> 
 <h3>- LinkedList: </h3>is a dynamic list that grows automatically, it is so fast in adding and removing elements from the list and it is composed of nodes that are connected to each other using addresses while they are distributed randomly in memory. It is so slow in retrieving data as they are distributed randomly in the memory. It implements List Interface and DeQueue Interface. The functions inherited from DeQueue Interface include "getFirst()", "getLast()", "addFirst()", "addLast", etc. <br>
 <h3>- HashSet: </h3>is a dynamic list that grows automatically, it does not accept duplicates. Its initial size by default is 16 with a 75% load factor, to change those default values: <br>
 
         HashSet<String> hs = new HashSet<>(100, 0.8)
 
-<h3>- LinkedHashSet: </h3>is a dynamic list that grows automatically, it does not accept duplicates. It does not accept duplicates but it preserves the insertion oreder of the elements, its internal implementation based on hash table and linked list. <br>
+<h3>- LinkedHashSet: </h3>is a dynamic list that grows automatically, it does not accept duplicates. It does not accept duplicates but it preserves the insertion order of the elements, its internal implementation is based on a hash table and linked list. <br>
         
 <h3>- Stack: </h3>is a dynamic list that grows automatically, it builds on the concept of "First In Last Out (FILO)" <br>
-<h3>- PriorityQueue: </h3>is a dynamic list that grows automatically, it builds on the concept of "First In First Out (FIFO)", it similar to LinkedList where it implements Queue Interface but it does not support hetrogeneouse data in the list. It has two main methods "offer()" and "add()", the first one return "Null" if the insertion fail and the second returns an exeption. <br>
+<h3>- PriorityQueue: </h3>is a dynamic list that grows automatically, it builds on the concept of "First In First Out (FIFO)", it is similar to LinkedList where it implements Queue Interface but it does not support heterogeneous data in the list. It has two main methods "offer()" and "add()", the first one return "Null" if the insertion fails and the second returns an exception. <br>
 <br>
 In the 'java.util' package there is a class called Collections. It has a lot of useful methods that can be applied to lists as:
 
@@ -73,3 +72,13 @@ It is a class provided by the 'java.util' package that can be used to iterate ov
         while(itrList.hasNext()){
             System.out.println(itrList.next());
         }
+
+
+
+<h2>Map Interface </h2>
+Map Interface is  used to store key-value pairs, both key and value should be objects while keys can't be duplicated. The most common classes that implement map interface are the following:
+<h3>- HashMap</h3>It uses the hashtable as the underlying data structure, it doesn't preserve the insertion order of the elements. HashMap is a great choice for searching operations. <br>
+
+<h3>- HashTable</h3>It uses the hashtable as the underlying data structure, it doesn't preserve the insertion order of the elements. HashTable is an old version of the map. It is not thread-safe and does not accept null keys or values at all. <br>
+
+
