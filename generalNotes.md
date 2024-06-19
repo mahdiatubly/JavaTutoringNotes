@@ -86,6 +86,34 @@ In Java, the record keyword was introduced in Java 14 as a preview feature and b
 
         public record Point(int x, int y) {}
 
+<h2>Functional Programming</h2>
+Functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data. In Java, functional programming has become more prominent with the introduction of features like lambda expressions, functional interfaces, and the Stream API in Java 8.
 
+        public class StreamExample {
+            public static void main(String[] args) {
+                // Create a list of integers
+                List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        
+                // Use streams to filter and print the odd numbers
+                numbers.stream()           // Convert the list to a stream
+                       .filter(n -> n % 2 != 0) // Filter out even numbers (Lambda Expresion)
+                       .forEach(System.out::println); // Print each remaining number (Method Reference)
+            }
+        }
 
+__map__ returns a new stream of transformed elements. Has similar functionality to forEach but for each is void:
+
+    public class MapExample {
+        public static void main(String[] args) {
+            List<String> names = Arrays.asList("Alice", "Bob", "Charlie", "David");
+    
+            // Use map to convert each name to uppercase
+            List<String> upperCaseNames = names.stream()
+                                               .map(String::toUpperCase)
+                                               .collect(Collectors.toList());
+    
+            // Print the new list
+            upperCaseNames.forEach(System.out::println);
+        }
+    }
 
