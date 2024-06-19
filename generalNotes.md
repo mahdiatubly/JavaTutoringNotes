@@ -81,4 +81,11 @@ Map Interface is  used to store key-value pairs, both key and value should be ob
 
 <h3>- HashTable</h3>It uses the hashtable as the underlying data structure, it doesn't preserve the insertion order of the elements. HashTable is an old version of the map. It is not thread-safe and does not accept null keys or values at all. <br>
 
+<h2>Records</h2>
+In Java, the record keyword was introduced in Java 14 as a preview feature and became a standard feature in Java 16. Records provide a concise way to create immutable data classes. They are designed to be a quick and clean way to create classes that are primarily used to store data and have minimal behavior.
+
+        public record Point(int x, int y) {}
+
+
+
 
