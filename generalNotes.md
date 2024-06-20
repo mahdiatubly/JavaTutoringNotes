@@ -117,3 +117,53 @@ __map__ returns a new stream of transformed elements. Has similar functionality 
         }
     }
 
+__Predicate__ is a functional interface that represents a condition (or predicate) that takes one argument and returns a boolean value.
+
+        public class PredicateExample {
+            public static void main(String[] args) {
+                List<String> names = Arrays.asList("Alice", "Bob", "Charlie", "David", "Eve");
+        
+                // Define a predicate that checks if a string has a length greater than 3
+                Predicate<String> lengthGreaterThanThree = name -> name.length() > 3;
+        
+                // Use the predicate to filter the list
+                List<String> filteredNames = names.stream()
+                                                  .filter(lengthGreaterThanThree)
+                                                  .collect(Collectors.toList());
+        
+                // Print the filtered list
+                System.out.println(filteredNames); // Output: [Alice, Charlie, David]
+            }
+    }
+
+__Optional class__ is a container object which may or may not contain a non-null value. It was introduced in Java 8 to reduce the number of null references and avoid potential NullPointerException errors. By using Optional, developers can explicitly specify the possibility of an absent value and handle it more gracefully. 
+You can create an Optional object using the following methods:
+empty(): Returns an empty Optional instance.
+of(value): Returns an Optional with the specified non-null value.
+ofNullable(value): Returns an Optional with the specified value, or an empty Optional if the value is null.
+
+        Optional<String> optionalEmpty = Optional.empty();          // An empty Optional
+        Optional<String> optionalValue = Optional.of("Hello");      // Optional containing "Hello"
+        Optional<String> optionalNullable = Optional.ofNullable(null);  // An empty Optional
+        Optional<String> optionalNullableValue = Optional.ofNullable("World"); // Optional containing "World"
+
+To access the value contained in an Optional, you can use the following methods:
+get(): Returns the value if present, otherwise throws NoSuchElementException. Use this method with caution.
+isPresent(): Returns true if the value is present, otherwise false.
+ifPresent(Consumer<? super T> consumer): Executes the given consumer if a value is present.
+orElse(T other): Returns the value if present, otherwise returns the specified default value.
+orElseGet(Supplier<? extends T> other): Returns the value if present, otherwise invokes the specified supplier and returns the result.
+orElseThrow(Supplier<? extends X> exceptionSupplier): Returns the value if present, otherwise throws an exception produced by the exception supplier.
+
+        public Optional<String> getOptionalValue() {
+            return Optional.empty(); // or Optional.of("some value")
+        }
+        
+        public void processOptionalValue() {
+            Optional<String> optionalValue = getOptionalValue();
+            optionalValue.ifPresentOrElse(
+                value -> System.out.println(value.toUpperCase()),
+                () -> System.out.println("No value present")
+            );
+        }
+
