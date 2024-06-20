@@ -138,9 +138,9 @@ __Predicate__ is a functional interface that represents a condition (or predicat
 
 __Optional class__ is a container object which may or may not contain a non-null value. It was introduced in Java 8 to reduce the number of null references and avoid potential NullPointerException errors. By using Optional, developers can explicitly specify the possibility of an absent value and handle it more gracefully. 
 You can create an Optional object using the following methods:
-empty(): Returns an empty Optional instance.
-of(value): Returns an Optional with the specified non-null value.
-ofNullable(value): Returns an Optional with the specified value, or an empty Optional if the value is null.
+* empty(): Returns an empty Optional instance.
+* of(value): Returns an Optional with the specified non-null value.
+* ofNullable(value): Returns an Optional with the specified value, or an empty Optional if the value is null.
 
         Optional<String> optionalEmpty = Optional.empty();          // An empty Optional
         Optional<String> optionalValue = Optional.of("Hello");      // Optional containing "Hello"
@@ -148,12 +148,12 @@ ofNullable(value): Returns an Optional with the specified value, or an empty Opt
         Optional<String> optionalNullableValue = Optional.ofNullable("World"); // Optional containing "World"
 
 To access the value contained in an Optional, you can use the following methods:
-get(): Returns the value if present, otherwise throws NoSuchElementException. Use this method with caution.
-isPresent(): Returns true if the value is present, otherwise false.
-ifPresent(Consumer<? super T> consumer): Executes the given consumer if a value is present.
-orElse(T other): Returns the value if present, otherwise returns the specified default value.
-orElseGet(Supplier<? extends T> other): Returns the value if present, otherwise invokes the specified supplier and returns the result.
-orElseThrow(Supplier<? extends X> exceptionSupplier): Returns the value if present, otherwise throws an exception produced by the exception supplier.
+* get(): Returns the value if present, otherwise throws NoSuchElementException. Use this method with caution.
+* isPresent(): Returns true if the value is present, otherwise false.
+* ifPresent(Consumer<? super T> consumer): Executes the given consumer if a value is present.
+* orElse(T other): Returns the value if present, otherwise returns the specified default value.
+* orElseGet(Supplier<? extends T> other): Returns the value if present, otherwise invokes the specified supplier and returns the result.
+* orElseThrow(Supplier<? extends X> exceptionSupplier): Returns the value if present, otherwise throws an exception produced by the exception supplier.
 
         public Optional<String> getOptionalValue() {
             return Optional.empty(); // or Optional.of("some value")
