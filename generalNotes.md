@@ -5,40 +5,64 @@ There are 3 types of high-level programming languages: <br>
 - <strong>Interpreted:</strong> Translate the code into machine code whenever you run the program, the translation to machine code won't be saved in any form. If you want to rerun the code you have to retranslate the whole code again. That is what makes interpreted programming languages slower than compiled ones. <br>
 - <strong>JVM:</strong> The code is first compiled into what is called Bytecode saved in (.class) file the n The Bytecode is interpreted by JVM into the machine code of the platform that the program running on. <br>
 
-<h2>Generics</h2>
-Generics are used to generalize the code where it can be used with different data types. Example:
-    
-    /* 
-    You can restrict the type of generic to be the classes that extend a specific class or interface:
-    <T extends Class1 & Interface1 & Interface2>
-    Remember that you can't extend more than one class but you can extend as much as you want of interfaces.
-    */
-    public class Test <T>{
-      public void print(T v) {
-          System.out.println(v);
-      }
+**Generics** in Java allow you to write code that is flexible and reusable for multiple data types without losing type safety. They work by parameterizing types at compile time, ensuring that operations on collections or other parameterized types are type-safe.
+
+---
+
+### Example Code Explanation:
+```java
+public class Test<T> {
+    public void print(T v) {
+        System.out.println(v);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Using the generic class with String
+        Test<String> t = new Test<>();
+        t.print("ABBAS\nHUSSAIN\nHUSSAIN\nHUSSAIN\n");
+
+        // Generic method to print a value twice
+        repeatedPrint("HUSSAIN");
+
+        // Using wildcard (?) with a list
+        Integer[] init = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        List<Integer> list = new ArrayList<>(Arrays.asList(init));
+        printList(list);
     }
 
-    //main:
-    public class Main {
-        public static void main(String[] args) {
-            Test<String> T = new Test<>();
-            Integer[] init = {1,2,3,4,5,6,7,8,9,10,11,12,13,14};
-            List<Integer> l = new ArrayList<>(Arrays.asList(init));
-            T.print("ABBAS\nHUSSAIN\nHUSSAIN\nHUSSAIN\n");
-            repeatedPrint("HUSSAIN");
-            printList(l);
-        }
-        public static <T> void repeatedPrint(T s){
-            System.out.println("\n"+s+"\n"+s);
-        }
-        //Notice that wildcard "?" can extend a specific class similar to the generic type
-        public static void printList(List<?> l){
-            for (Object e:l) {
-                System.out.println(e);
-            }
+    public static <T> void repeatedPrint(T s) {
+        System.out.println("\n" + s + "\n" + s);
+    }
+
+    public static void printList(List<?> l) {
+        for (Object e : l) {
+            System.out.println(e);
         }
     }
+}
+```
+
+---
+
+### Key Concepts in the Example:
+1. **Generic Class**:
+   - `Test<T>`: A class with a type parameter `T` that can be replaced by any type at runtime.
+   - Example: `Test<String>` for `String` or `Test<Integer>` for `Integer`.
+
+2. **Generic Method**:
+   - `<T>` before the method name defines it as a generic method.
+   - Example: `repeatedPrint(T s)` can accept any type.
+
+3. **Wildcard (`?`)**:
+   - `List<?>`: A list of any type, where the type is unknown at compile time.
+   - Example: `printList(List<?> l)` iterates over any list.
+
+4. **Bounded Types**:
+   - Use `T extends Class1 & Interface1` to restrict `T` to specific types or interfaces.
+
+---
 
 <h2>Java Collection Framework</h2>
 Before we start with the Java collection let's take a look at the idea of wrapper classes; wrapper classes are objects that represent the primitive data types. They are used in places primitive types in object form. Java Collection does not accept primitive types therefore we have to use wrapper classes. One of the greatest things about wrapper classes is the autoboxing and unboxing where the type of the values will be changed automatically into primitive wherever you need them as primitives. <br>
