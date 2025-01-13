@@ -11,7 +11,7 @@ in Java allow you to write code that is flexible and reusable for multiple data 
 
 ---
 
-##### Example Code Explanation:
+#### Example Code Explanation:
 ```java
 public class Test<T> {
     public void print(T v) {
@@ -48,7 +48,7 @@ public class Main {
 
 ---
 
-##### Key Concepts in the Example:
+#### Key Concepts in the Example:
 1. **Generic Class**:
    - `Test<T>`: A class with a type parameter `T` that can be replaced by any type at runtime.
    - Example: `Test<String>` for `String` or `Test<Integer>` for `Integer`.
