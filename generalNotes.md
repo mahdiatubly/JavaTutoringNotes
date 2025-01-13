@@ -5,11 +5,13 @@ There are 3 types of high-level programming languages: <br>
 - <strong>Interpreted:</strong> Translate the code into machine code whenever you run the program, the translation to machine code won't be saved in any form. If you want to rerun the code you have to retranslate the whole code again. That is what makes interpreted programming languages slower than compiled ones. <br>
 - <strong>JVM:</strong> The code is first compiled into what is called Bytecode saved in (.class) file the n The Bytecode is interpreted by JVM into the machine code of the platform that the program running on. <br>
 
-**Generics** in Java allow you to write code that is flexible and reusable for multiple data types without losing type safety. They work by parameterizing types at compile time, ensuring that operations on collections or other parameterized types are type-safe.
+<h2>Generics</h2>
+
+in Java allow you to write code that is flexible and reusable for multiple data types without losing type safety. They work by parameterizing types at compile time, ensuring that operations on collections or other parameterized types are type-safe.
 
 ---
 
-### Example Code Explanation:
+##### Example Code Explanation:
 ```java
 public class Test<T> {
     public void print(T v) {
@@ -46,7 +48,7 @@ public class Main {
 
 ---
 
-### Key Concepts in the Example:
+##### Key Concepts in the Example:
 1. **Generic Class**:
    - `Test<T>`: A class with a type parameter `T` that can be replaced by any type at runtime.
    - Example: `Test<String>` for `String` or `Test<Integer>` for `Integer`.
