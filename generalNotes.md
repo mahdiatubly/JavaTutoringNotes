@@ -193,3 +193,4 @@ To access the value contained in an Optional, you can use the following methods:
             );
         }
 
+* Spliterator is a low-level construct designed to traverse and partition elements of a data source. It works behind the scenes in the Streams API to split the data into chunks that can be processed in parallel.
